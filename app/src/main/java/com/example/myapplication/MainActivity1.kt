@@ -34,6 +34,7 @@ class MainActivity1 : AppCompatActivity() {
         text3 = findViewById(R.id.textView2)
         text4 = findViewById(R.id.textView3)
         text5 = findViewById(R.id.textView5)
+
         button?.setOnClickListener {
             val en1: String = ed1?.text.toString()
             val en2: String = ed2?.text.toString()
@@ -80,6 +81,8 @@ class MainActivity1 : AppCompatActivity() {
 
             }
         }
+    }
+}
 
     }
 }
