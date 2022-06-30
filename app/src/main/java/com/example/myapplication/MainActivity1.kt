@@ -39,38 +39,48 @@ class MainActivity1 : AppCompatActivity() {
             val en2: String = ed2?.text.toString()
             val en3: String = ed3?.text.toString()
             val en4: String = ed4?.text.toString()
+            var f1: Boolean = true
+            var f2: Boolean = true
+            var f3: Boolean = true
+            var f4: Boolean = true
 
             if (en1.isEmpty()) {
+                f1 = false
                 text1?.setText("Впишите своё имя")
-            } else{
+            } else{ f1 = true
                 text1?.setText(" ")
             }
             if (en2.isNotEmpty()) {
                 if (1 > en2.toDouble() || en2.toDouble() > 249){
+                    f2 = false
                     text2?.setText("Впишите свой рост корректно!")
-                }else{
+                } else{ f2 = true
                     text2?.setText(" ")
                 }
             }
             if (en3.isNotEmpty()) {
                 if (1 > en3.toDouble() || en3.toDouble()>249){
+                    f3 = false
                     text3?.setText("Впишите свой вес корректно!")
-                }
-                else{
+                } else{ f3 = true
                     text3?.setText(" ")
                 }
             }
             if (en4.isNotEmpty()) {
                 if (1 > en4.toDouble() || en4.toDouble()>149){
+                    f4 = false
                     text4?.setText("Впишите свой возраст корректно!")
-                } else{
+                } else{ f4 = true
                     text4?.setText(" ")
                 }
 
-            }
+            if (f1 && f2 && f3 && f4){
                 text5?.setText("Ответ: " + en4.toDouble()*en3.toDouble()*en2.toDouble())
             }
 
             }
         }
+
+    }
+}
 
