@@ -68,7 +68,7 @@ class MainActivity1 : AppCompatActivity() {
                 }
 
             }
-                text5?.setText(" " + en4.toDouble()*en3.toDouble()*en2.toDouble())
+                text5?.setText("Ответ: " + en4.toDouble()*en3.toDouble()*en2.toDouble())
             }
 
             }
